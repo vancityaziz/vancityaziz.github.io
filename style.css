@@ -1,0 +1,285 @@
+:root {
+    --bg-color: #ffffff;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --accent-blue: #0055ff;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+/* Header Alignment Fix */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.profile-img-container {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.nesr-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
+}
+
+.degree-line {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.minor-line {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.institution {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Abstract & Button */
+section {
+    margin-bottom: 60px;
+}
+
+.bio {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+/* CV Layout */
+.section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-family: var(--font-mono);
+}
+
+.job {
+    margin-bottom: 35px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.role {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    margin: 4px 0 12px 0;
+}
+
+.details {
+    padding-left: 20px;
+    font-size: 0.95rem;
+}
+
+.details li {
+    margin-bottom: 8px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #111;
+    color: #111;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+footer {
+    padding: 60px 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+/* Mobile Alignment Fix */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    .job-header {
+        flex-direction: column;
+    }
+    .name {
+        font-size: 2.2rem;
+    }
+}
+
+/* Interest Tags Styling */
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Slightly tighter gap for mobile */
+    margin-top: -10px; /* Offsets section-title margin */
+}
+
+.interest-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem; /* Slightly smaller for mobile scaling */
+    padding: 6px 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    color: var(--text-muted);
+    background-color: #fafafa; /* Subtle background to define the shape */
+    white-space: nowrap; /* Prevents a single tag from breaking across two lines */
+}
+
+/* Mobile specific tweak */
+@media (max-width: 600px) {
+    .interests-grid {
+        gap: 8px;
+    }
+    .interest-tag {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Project Specific Additions */
+.hr {
+    height: 1px;
+    background: #eee;
+    margin: 20px 0 40px 0;
+}
+
+.project-entry {
+    margin-bottom: 80px;
+}
+
+.tech-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.spec-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+}
+
+.spec-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Video Handling */
+.video-container {
+    margin-top: 25px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.video-aspect-ratio {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-aspect-ratio iframe, 
+.video-aspect-ratio video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .tech-specs {
+        grid-template-columns: 1fr;
+    }
+}

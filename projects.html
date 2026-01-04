@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mohammad Abdul Aziz</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav style="margin-bottom: 40px;">
+            <a href="index.html" class="date" style="text-decoration: none;">← BACK TO OVERVIEW</a>
+        </nav>
+
+        <header>
+            <h1 class="name">Project Portfolio</h1>
+            <p class="minor-line">Industrial R&D and Personal Projects</p>
+            <div class="hr"></div>
+        </header>
+
+        <section class="project-entry">
+            <div class="job-header">
+                <span>Mixture-of-Experts Ensemble for Skin Lesion Classification</span>
+                <span class="date">Aug 2025</span>
+            </div>
+            <div class="role">APS360 Course Project | University of Toronto</div>
+            
+            <div class="tech-specs">
+                <div class="spec-item">
+                    <span class="spec-label">ARCHITECTURE</span>
+                    <span class="spec-value">MoE Gating Network, EfficientNet (B0, B2, B3), MobileNet-V2</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">PERFORMANCE</span>
+                    <span class="spec-value">82.5% Accuracy, 0.966 AUC, 74.8% Balanced Accuracy</span>
+                </div>
+            </div>
+
+            <ul class="details">
+                <li>Developed a Mixture-of-Experts (MoE) inspired ensemble using a top-k gating network to selectively weigh individual CNN experts.</li>
+                <li>Mitigated extreme class imbalance in the HAM10000 dataset using weighted cross-entropy loss and automated data augmentation (RandAugment, CutOut).</li>
+                <li>Implemented a two-stage training workflow: fine-tuning individual experts followed by frozen-backbone gating network optimization.</li>
+                <li>Achieved superior robustness over baseline SVMs, particularly in clinical recall for malignant classes.</li>
+            </ul>
+        </section>
+
+        <section class="project-entry">
+            <div class="job-header">
+                <span>ML-Driven Friction Reducer Optimization in Hydraulic Fracturing</span>
+                <span class="date">Oct 2025</span>
+            </div>
+            <div class="role">National Energy Services Reunited | Presented at CSChE Montreal</div>
+            
+            <ul class="details" style="margin-top: 15px;">
+                <li>Utilized field data to model wellhead pressure as a function of slurry composition and chemical additives.</li>
+                <li>Optimized Friction Reducer (FR) injection profiles to reduce FR consumption while transmitting adequate pressure to fracture the rock.</li>
+            </ul>
+
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <img src="nesr-overview.png" alt="NESR Project Overview" class="nesr-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="project-entry">
+            <div class="job-header">
+                <span>Hydrometallurgical Extraction & Quantitative Analysis of Copper Ores</span>
+                <span class="date">Dec 2025</span>
+            </div>
+            <div class="role">CHE204 Course Project | University of Toronto</div>
+            
+            <div class="tech-specs">
+                <div class="spec-item">
+                    <span class="spec-label">TECHNIQUES</span>
+                    <span class="spec-value">Complexometric Titration, Spectrophotometry (UV-Vis)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">ANALYSIS</span>
+                    <span class="spec-value">Statistical Error Analysis & Pugh Method Feasibility</span>
+                </div>
+            </div>
+
+            <ul class="details">
+                <li>Designed and executed an experimental procedure to quantify copper metal in concentrate samples from two mine sites.</li>
+                <li>Analyzed chalcopyrite (CuFeS₂) samples converted to Copper (II) Oxide to determine %Cu by weight.</li>
+                <li>Evaluated analytical accuracy between titrimetric and colorimetric methods to replace unreliable ICP instrumentation.</li>
+                <li>Formulated procurement recommendations based on experimental yield and logistics/environmental history.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2025 Mohammad Abdul Aziz.</p>
+        </footer>
+    </div>
+</body>
+</html>
